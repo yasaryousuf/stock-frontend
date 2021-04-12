@@ -59,8 +59,9 @@ export default {
 
           if (localStorage.getItem("jwt") != null) {
             this.$emit("loggedIn");
-            if (this.$route.params.nextUrl != null) {
-              this.$router.push(this.$route.params.nextUrl);
+            console.log(this.$route.query.nextUrl);
+            if (this.$route.query.nextUrl != null) {
+              this.$router.push(this.$route.query.nextUrl);
             } else {
               this.$router.push("/home");
             }
