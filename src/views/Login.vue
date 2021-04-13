@@ -22,8 +22,8 @@
 </template>
 
 <script>
-// import http from "../api/http";
-import axios from "axios";
+import http from "../api/http";
+// import axios from "axios";
 export default {
   data: () => ({
     show_password: false,
@@ -47,8 +47,8 @@ export default {
 
   methods: {
     login() {
-      axios
-        .post("http://localhost:8000/api/login", {
+      http
+        .post("login", {
           email: this.form.email,
           password: this.form.password,
         })
